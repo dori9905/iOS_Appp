@@ -12,52 +12,91 @@ struct ContentView: View {
     @State private var sliderValue = 50.0
     @State private var game = Game()
     var body: some View {
-        VStack {
-            Text("🎯🎯🎯")
-                .font(.largeTitle)
-            Text("PUT THE BULLS EYE AS CLOSE AS YOU CAN TO")
-                .bold()
-                .multilineTextAlignment(.center)
-                .lineSpacing(4.0)
-                .font(.footnote)
-                .kerning(2.0)
-            Text(String(game.target))
-                .kerning(-1.0)
-                .font(.largeTitle)
-                .fontWeight(.black)
-            HStack{
-                Text("1")
-                    .bold()
-                Slider(value: $sliderValue, in: 1.0...100.00)
-                Text("100")
-                    .bold()
+        ZStack{
+            BackgoundView(game: $game)
+            VStack {
+               InstructionView(game: $game)
+                    .padding(.bottom, alertIsVisible ? 0 : 100)
+                if alertIsVisible{
+                    PointsView(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game)
+                        .transition(.scale)
+                }else{
+                    HitMeButton(alertIsVisible: $alertIsVisible, sliderValue: $sliderValue, game: $game )
+                        .transition(.scale)
+                }
             }
-            Button("Hit Me"){
-                alertIsVisible = true
+            if !alertIsVisible{
+                SliderView(sliderValue: $sliderValue)
+                    .zIndex(1)
+                    .transition(.scale)
             }
-            .alert(
-                "Hello, There!",
-        isPresented: $alertIsVisible,
-        actions: {
-            Button("Awesome"){
-                print("Alert Closed")
-            }
-        },
-        message: {
-            let roundedValue: Int = Int(sliderValue.rounded())
-            Text("""
-The slider's value is \(roundedValue).
-You Scored \(game.points(sliderValue: roundedValue)) points this round.
-""")
-        }
-            
-            )
         }
     }
 }
 
-struct ContentView_Previews: PreviewProvider{
-    static var previews: some View{
-        ContentView()
+struct InstructionView: View {
+    @Binding var game: Game
+    var body: some View {
+        VStack{
+            InstructionText(text: "🎯🎯🎯\nPut the bulls eye as close as you can to")
+                .padding(.horizontal, 30)
+            BigNumberText(text: String(game.target))
+        }
     }
 }
+
+struct SliderView: View {
+    @Binding var sliderValue: Double
+    var body: some View {
+        HStack{
+           SliderLabeltext(text: "1")
+                .frame(width: 35)
+            Slider(value: $sliderValue, in: 1.0...100.00)
+            SliderLabeltext(text: "100")
+                .frame(width: 35)
+        }
+        .padding()
+    }
+}
+
+struct HitMeButton: View {
+    @Binding var alertIsVisible: Bool
+    @Binding var sliderValue: Double
+    @Binding var game : Game
+    var body: some View {
+        Button("Hit Me".uppercased()){
+            withAnimation{
+                alertIsVisible = true
+            }
+        }
+        .padding(20.0)
+        .background(
+            ZStack{
+                Color("ButtonColor")
+                LinearGradient(
+                    gradient: Gradient(colors: [Color.white.opacity(0.3), Color.clear]), startPoint: .top, endPoint: .bottom)
+            }
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: Constants.General.roundRectCornerRadius)
+                .strokeBorder(Color.white, lineWidth: Constants.General.strokeWidth)
+            )
+        .foregroundColor(.white)
+        .cornerRadius(Constants.General.roundRectCornerRadius)
+        .bold()
+        .font(.title3)
+       
+    }
+}
+
+    struct ContentView_Previews: PreviewProvider{
+        static var previews: some View{
+            ContentView()
+            ContentView()
+                .previewInterfaceOrientation(.landscapeRight)
+                .preferredColorScheme(.dark)
+                
+        }
+    }
+    
+

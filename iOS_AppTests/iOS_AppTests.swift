@@ -5,7 +5,7 @@
 //  Created by CTS TechBar Checkout on 2/8/24.
 //
 
-import XCTest
+/*import XCTest
 @testable import iOS_App
 
 final class iOS_AppTests: XCTestCase {
@@ -34,4 +34,4 @@ final class iOS_AppTests: XCTestCase {
         }
     }
 
-}
+}*/

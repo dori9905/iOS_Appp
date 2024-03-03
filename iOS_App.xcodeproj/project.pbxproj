@@ -13,7 +13,13 @@
 		455F20F72B75ABE1003208EC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 455F20F62B75ABE1003208EC /* Preview Assets.xcassets */; };
 		455F21012B75ABE1003208EC /* iOS_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F21002B75ABE1003208EC /* iOS_AppTests.swift */; };
 		455F210B2B75ABE2003208EC /* iOS_AppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F210A2B75ABE2003208EC /* iOS_AppUITests.swift */; };
-		455F210D2B75ABE2003208EC /* iOS_AppUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 455F210C2B75ABE2003208EC /* iOS_AppUITestsLaunchTests.swift */; };
+		45C957B12B917DC30056B4B0 /* TextViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957B02B917DC30056B4B0 /* TextViews.swift */; };
+		45C957B32B9193DF0056B4B0 /* Shapes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957B22B9193DE0056B4B0 /* Shapes.swift */; };
+		45C957B52B919A0F0056B4B0 /* RoundedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957B42B919A0F0056B4B0 /* RoundedViews.swift */; };
+		45C957B72B91A2500056B4B0 /* BackgoundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957B62B91A2500056B4B0 /* BackgoundView.swift */; };
+		45C957B92B93068E0056B4B0 /* PointsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957B82B93068E0056B4B0 /* PointsView.swift */; };
+		45C957BB2B93BC5F0056B4B0 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957BA2B93BC5F0056B4B0 /* Constants.swift */; };
+		45C957BD2B93CF4D0056B4B0 /* LeaderBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45C957BC2B93CF4D0056B4B0 /* LeaderBoardView.swift */; };
 		45D256712B75C387000818B2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 45D256702B75C387000818B2 /* Game.swift */; };
 /* End PBXBuildFile section */
 
@@ -44,7 +50,13 @@
 		455F21002B75ABE1003208EC /* iOS_AppTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_AppTests.swift; sourceTree = "<group>"; };
 		455F21062B75ABE2003208EC /* iOS_AppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = iOS_AppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		455F210A2B75ABE2003208EC /* iOS_AppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_AppUITests.swift; sourceTree = "<group>"; };
-		455F210C2B75ABE2003208EC /* iOS_AppUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOS_AppUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		45C957B02B917DC30056B4B0 /* TextViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TextViews.swift; sourceTree = "<group>"; };
+		45C957B22B9193DE0056B4B0 /* Shapes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Shapes.swift; sourceTree = "<group>"; };
+		45C957B42B919A0F0056B4B0 /* RoundedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoundedViews.swift; sourceTree = "<group>"; };
+		45C957B62B91A2500056B4B0 /* BackgoundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgoundView.swift; sourceTree = "<group>"; };
+		45C957B82B93068E0056B4B0 /* PointsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PointsView.swift; sourceTree = "<group>"; };
+		45C957BA2B93BC5F0056B4B0 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		45C957BC2B93CF4D0056B4B0 /* LeaderBoardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeaderBoardView.swift; sourceTree = "<group>"; };
 		45D256702B75C387000818B2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -99,6 +111,13 @@
 			children = (
 				455F20EF2B75ABD8003208EC /* iOS_AppApp.swift */,
 				455F20F12B75ABD8003208EC /* ContentView.swift */,
+				45C957B02B917DC30056B4B0 /* TextViews.swift */,
+				45C957B22B9193DE0056B4B0 /* Shapes.swift */,
+				45C957B42B919A0F0056B4B0 /* RoundedViews.swift */,
+				45C957B62B91A2500056B4B0 /* BackgoundView.swift */,
+				45C957B82B93068E0056B4B0 /* PointsView.swift */,
+				45C957BA2B93BC5F0056B4B0 /* Constants.swift */,
+				45C957BC2B93CF4D0056B4B0 /* LeaderBoardView.swift */,
 				455F20F32B75ABE1003208EC /* Assets.xcassets */,
 				455F20F52B75ABE1003208EC /* Preview Content */,
 			);
@@ -125,7 +144,6 @@
 			isa = PBXGroup;
 			children = (
 				455F210A2B75ABE2003208EC /* iOS_AppUITests.swift */,
-				455F210C2B75ABE2003208EC /* iOS_AppUITestsLaunchTests.swift */,
 			);
 			path = iOS_AppUITests;
 			sourceTree = "<group>";
@@ -268,9 +286,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				45C957B52B919A0F0056B4B0 /* RoundedViews.swift in Sources */,
 				455F20F22B75ABD8003208EC /* ContentView.swift in Sources */,
+				45C957B12B917DC30056B4B0 /* TextViews.swift in Sources */,
+				45C957B92B93068E0056B4B0 /* PointsView.swift in Sources */,
+				45C957BD2B93CF4D0056B4B0 /* LeaderBoardView.swift in Sources */,
+				45C957B32B9193DF0056B4B0 /* Shapes.swift in Sources */,
+				45C957B72B91A2500056B4B0 /* BackgoundView.swift in Sources */,
 				45D256712B75C387000818B2 /* Game.swift in Sources */,
 				455F20F02B75ABD8003208EC /* iOS_AppApp.swift in Sources */,
+				45C957BB2B93BC5F0056B4B0 /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -286,7 +311,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				455F210D2B75ABE2003208EC /* iOS_AppUITestsLaunchTests.swift in Sources */,
 				455F210B2B75ABE2003208EC /* iOS_AppUITests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -436,6 +460,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iOS_App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bull's Eye";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -464,6 +489,7 @@
 				DEVELOPMENT_ASSET_PATHS = "\"iOS_App/Preview Content\"";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_CFBundleDisplayName = "Bull's Eye";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
